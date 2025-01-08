@@ -1,0 +1,23 @@
+name: Report
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-and-upload-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Créer le fichier report.txt
+        run: echo "Rapport d'analyse" > report.txt
+
+      - name: Télécharger le fichier report.txt
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapport-analyse
+          path: report.txt
