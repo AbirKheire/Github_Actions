@@ -16,3 +16,9 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo "Hello World"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run cmd
+        run: npm run lint
