@@ -20,8 +20,7 @@ jobs:
       - name: Print Hello World
         run: echo "Hello World"
 
-
-      - name: Set up Node.js # Ici j'installe node
+      - name: Set up Node.js 
         uses: actions/setup-node@v4
         with:
           node-version: "18"
@@ -31,3 +30,14 @@ jobs:
 
       - name: Run Linter
         run: npm run lint
+
+      - name: Définir une variable d'environnement
+        env:
+          MESSAGE: "Déploiement réussi"
+        run: echo "Variable MESSAGE définie"
+
+      
+      - name: Afficher la variable
+        env:
+          MESSAGE: "Déploiement réussi" 
+        run: echo "$MESSAGE"
