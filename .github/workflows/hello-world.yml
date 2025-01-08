@@ -1,0 +1,14 @@
+name: CI Pipeline
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository # On met a jour notre repo la ou on est
+        uses: actions/checkout@v4
+
+      - name: greeting 
+        uses: echo "Hello World"
+
+    
