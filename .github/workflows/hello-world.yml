@@ -20,5 +20,5 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run cmd
+      - name: Run Linter
         run: npm run lint
