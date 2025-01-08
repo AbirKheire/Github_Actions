@@ -41,3 +41,9 @@ jobs:
         env:
           MESSAGE: "Déploiement réussi" 
         run: echo "$MESSAGE"
+        
+      - name: Afficher le secret
+        env:
+          MY_SECRET: ${{ secrets.API_KEY }}
+        run: |
+          echo "La valeur du secret est : $MY_SECRET"
